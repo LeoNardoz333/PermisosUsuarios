@@ -14,7 +14,7 @@ namespace AccesoDatos
         Base b = new Base("localhost","root","","agenciaautomotriz");
         public DataSet mostrar(string usuario, string pass)
         {
-            return b.Obtener(string.Format("select nombre, pass from usuario where nombre = '{0}' and pass = '{1}'", usuario, pass), "usuario");
+            return b.Obtener(string.Format("select idUsuario, nombre, pass from usuario where nombre = '{0}' and pass = '{1}'", usuario, pass), "usuario");
         }
         
         /*public void IniciarSesion(string usuario, string pass)
