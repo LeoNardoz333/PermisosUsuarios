@@ -37,7 +37,9 @@ namespace PresentacionPermisosUsuarios
                 {
                     MessageBox.Show("Bienvenido");
                     FrmMenu menu = new FrmMenu();
+                    Visible = false;
                     menu.ShowDialog();
+                    Visible = true;
                 }
             }
             catch (Exception)

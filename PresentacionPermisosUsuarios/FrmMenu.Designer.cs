@@ -33,6 +33,7 @@ namespace PresentacionPermisosUsuarios
             this.optPermisos = new System.Windows.Forms.ToolStripButton();
             this.optProductos = new System.Windows.Forms.ToolStripButton();
             this.optHerramientas = new System.Windows.Forms.ToolStripButton();
+            this.optSalir = new System.Windows.Forms.ToolStripButton();
             this.tlMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,7 +43,8 @@ namespace PresentacionPermisosUsuarios
             this.tlMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.optPermisos,
             this.optProductos,
-            this.optHerramientas});
+            this.optHerramientas,
+            this.optSalir});
             this.tlMenu.Location = new System.Drawing.Point(0, 0);
             this.tlMenu.Name = "tlMenu";
             this.tlMenu.Size = new System.Drawing.Size(141, 303);
@@ -56,6 +58,7 @@ namespace PresentacionPermisosUsuarios
             this.optPermisos.Name = "optPermisos";
             this.optPermisos.Size = new System.Drawing.Size(138, 20);
             this.optPermisos.Text = "Administrar Permisos";
+            this.optPermisos.Click += new System.EventHandler(this.optPermisos_Click);
             // 
             // optProductos
             // 
@@ -64,6 +67,7 @@ namespace PresentacionPermisosUsuarios
             this.optProductos.Name = "optProductos";
             this.optProductos.Size = new System.Drawing.Size(138, 20);
             this.optProductos.Text = "Productos";
+            this.optProductos.Click += new System.EventHandler(this.optProductos_Click);
             // 
             // optHerramientas
             // 
@@ -72,6 +76,16 @@ namespace PresentacionPermisosUsuarios
             this.optHerramientas.Name = "optHerramientas";
             this.optHerramientas.Size = new System.Drawing.Size(138, 20);
             this.optHerramientas.Text = "Herramientas";
+            this.optHerramientas.Click += new System.EventHandler(this.optHerramientas_Click);
+            // 
+            // optSalir
+            // 
+            this.optSalir.Image = global::PresentacionPermisosUsuarios.Properties.Resources.salida__2_;
+            this.optSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.optSalir.Name = "optSalir";
+            this.optSalir.Size = new System.Drawing.Size(138, 20);
+            this.optSalir.Text = "Salir";
+            this.optSalir.Click += new System.EventHandler(this.optSalir_Click);
             // 
             // FrmMenu
             // 
@@ -97,5 +111,6 @@ namespace PresentacionPermisosUsuarios
         private System.Windows.Forms.ToolStripButton optPermisos;
         private System.Windows.Forms.ToolStripButton optProductos;
         private System.Windows.Forms.ToolStripButton optHerramientas;
+        private System.Windows.Forms.ToolStripButton optSalir;
     }
 }

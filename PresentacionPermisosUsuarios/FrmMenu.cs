@@ -17,6 +17,30 @@ namespace PresentacionPermisosUsuarios
         ADpermisos adp;
         ManejadorPermisos mp;
         public static bool modificarU, agregar, mostrar, eliminar, modificar;
+
+        private void optHerramientas_Click(object sender, EventArgs e)
+        {
+            FrmHerramientas umu = new FrmHerramientas();
+            umu.ShowDialog();
+        }
+
+        private void optSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void optProductos_Click(object sender, EventArgs e)
+        {
+            FrmProductos uwu = new FrmProductos();
+            uwu.ShowDialog();
+        }
+
+        private void optPermisos_Click(object sender, EventArgs e)
+        {
+            FrmPermisos owo = new FrmPermisos();
+            owo.ShowDialog();
+        }
+
         public FrmMenu()
         {
             InitializeComponent();
