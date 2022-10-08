@@ -32,7 +32,9 @@ namespace PresentacionPermisosUsuarios
                 contra = dt.Rows[0]["pass"].ToString();
                 if (usuario == txtUsuario.Text && contra == txtPass.Text)
                 {
-                    MessageBox.Show("Bienvenido owo");
+                    MessageBox.Show("Bienvenido");
+                    FrmMenu menu = new FrmMenu();
+                    menu.ShowDialog();
                 }
             }
             catch (Exception)

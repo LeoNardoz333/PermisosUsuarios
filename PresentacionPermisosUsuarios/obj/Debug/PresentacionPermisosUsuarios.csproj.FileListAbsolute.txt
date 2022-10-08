@@ -27,3 +27,5 @@ C:\OneDrive\Documentos\Escuela\Base de datos\Administración de base de datos\Pr
 C:\OneDrive\Documentos\Escuela\Base de datos\Administración de base de datos\Proyectos\PresentacionPermisosUsuarios\PresentacionPermisosUsuarios\bin\Debug\ConectarRedReal.pdb
 C:\OneDrive\Documentos\Escuela\Base de datos\Administración de base de datos\Proyectos\PresentacionPermisosUsuarios\PresentacionPermisosUsuarios\bin\Debug\MySql.Data.xml
 C:\OneDrive\Documentos\Escuela\Base de datos\Administración de base de datos\Proyectos\PresentacionPermisosUsuarios\PresentacionPermisosUsuarios\obj\Debug\PresentacionPermisosUsuarios.exe.config
+C:\OneDrive\Documentos\Escuela\Base de datos\Administración de base de datos\Proyectos\PresentacionPermisosUsuarios\PresentacionPermisosUsuarios\obj\Debug\PresentacionPermisosUsuarios.FrmMenu.resources
+C:\OneDrive\Documentos\Escuela\Base de datos\Administración de base de datos\Proyectos\PresentacionPermisosUsuarios\PresentacionPermisosUsuarios\obj\Debug\PresentacionPermisosUsuarios.Properties.Resources.resources
