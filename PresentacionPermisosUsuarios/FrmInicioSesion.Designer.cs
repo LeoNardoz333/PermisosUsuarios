@@ -39,7 +39,7 @@ namespace PresentacionPermisosUsuarios
             // txtUsuario
             // 
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUsuario.Location = new System.Drawing.Point(12, 32);
+            this.txtUsuario.Location = new System.Drawing.Point(12, 44);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(198, 26);
             this.txtUsuario.TabIndex = 0;
@@ -47,7 +47,7 @@ namespace PresentacionPermisosUsuarios
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(76, 9);
+            this.label1.Location = new System.Drawing.Point(73, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 20);
             this.label1.TabIndex = 1;
@@ -65,7 +65,7 @@ namespace PresentacionPermisosUsuarios
             // txtPass
             // 
             this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPass.Location = new System.Drawing.Point(12, 96);
+            this.txtPass.Location = new System.Drawing.Point(12, 109);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(198, 26);
             this.txtPass.TabIndex = 3;

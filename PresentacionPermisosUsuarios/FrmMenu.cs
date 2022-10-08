@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AccesoDatos;
+using Manejador;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,31 @@ namespace PresentacionPermisosUsuarios
 {
     public partial class FrmMenu : Form
     {
+        ADpermisos adp;
+        ManejadorPermisos mp;
+        public static bool modificarU, agregar, mostrar, eliminar, modificar;
         public FrmMenu()
         {
             InitializeComponent();
+            adp = new ADpermisos();
+            mp = new ManejadorPermisos();
+        }
+
+        private void FrmMenu_Load(object sender, EventArgs e)
+        {
+            var ds = adp.mostrarPermisos(FrmInicioSesion.idusuario);
+            var dt = new DataTable();
+            dt = ds.Tables[0];
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                modificarU = bool.Parse(dt.Rows[i]["modificarUsuarios"].ToString());
+                agregar = bool.Parse(dt.Rows[i]["agregar"].ToString());
+                mostrar = bool.Parse(dt.Rows[i]["mostrar"].ToString());
+                eliminar = bool.Parse(dt.Rows[i]["eliminar"].ToString());
+                modificar = bool.Parse(dt.Rows[i]["modificar"].ToString());
+                mp.evaluarPermisos(int.Parse(dt.Rows[i]["_codigo"].ToString()),modificarU,agregar,modificar,
+                    eliminar,mostrar,optPermisos,optProductos,optHerramientas);
+            }
         }
     }
 }

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class Usuarios
+    public class Permisos
     {
-        public Usuarios(int opcion, int idUsuario, int codigo, bool modificarU, bool agregar, bool modificar, bool eliminar, bool mostrar)
+        public Permisos(int opcion, int idUsuario, int codigo, bool modificarU, bool agregar, bool modificar, bool eliminar, bool mostrar)
         {
             Opcion = opcion;
             _IdUsuario = idUsuario;

@@ -20,12 +20,15 @@ namespace PresentacionPermisosUsuarios
             InitializeComponent();
             adis = new ADiniciarSesion();
         }
-        string usuario, contra;
+        public static string usuario, contra;
+        public static int idusuario;
         private void btnIniciar_Click(object sender, EventArgs e)
         {
             var ds = adis.mostrar(txtUsuario.Text,txtPass.Text);
             var dt = new DataTable();
             dt = ds.Tables[0];
+            idusuario = int.Parse(dt.Rows[0]["idUsuario"].ToString());
+            //MessageBox.Show("id: "+idusuario);
             try
             {
                 usuario = dt.Rows[0]["nombre"].ToString();

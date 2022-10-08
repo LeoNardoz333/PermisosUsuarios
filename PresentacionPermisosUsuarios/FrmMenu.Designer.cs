@@ -83,6 +83,7 @@ namespace PresentacionPermisosUsuarios
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmMenu";
             this.Text = "Módulos disponibles";
+            this.Load += new System.EventHandler(this.FrmMenu_Load);
             this.tlMenu.ResumeLayout(false);
             this.tlMenu.PerformLayout();
             this.ResumeLayout(false);
