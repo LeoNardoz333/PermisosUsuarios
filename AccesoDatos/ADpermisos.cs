@@ -11,11 +11,11 @@ namespace AccesoDatos
     public class ADpermisos
     {
         //opcion,__idUsuario,__codigo,_modificarU,_agregar,_modificar,_eliminar,_mostrar
-        Base b = new Base("localhost","root","","agenciaautomotriz");
-        public void Agregar(dynamic Entidad)
+        Base b = new Base("localhost", "root", "", "agenciaautomotriz");
+        public void manipularPermisos (dynamic Entidad)
         {
-            b.comando(string.Format("call manipularPermisos({0},{1},{2},{4},{5},{6},{7},{8})",Entidad.Opcion,Entidad._IdUsuario,Entidad.ModificarU,
-                Entidad.Agregar,Entidad.Modificar,Entidad.Eliminar,Entidad.Mostrar));
+            b.comando(string.Format("call manipularPermisos({0},{1},{2},{3},{4},{5},{6},{7})",Entidad.Opcion,Entidad._IdUsuario,Entidad._Codigo,
+                Entidad.ModificarU,Entidad.Agregar,Entidad.Modificar,Entidad.Eliminar,Entidad.Mostrar));
         }
 
         public void Borrar(dynamic Entidad)

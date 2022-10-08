@@ -34,6 +34,10 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Crud, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Programación\Semestre 4\Códigos\Crud\Crud\bin\Debug\Crud.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -63,6 +67,12 @@
     </Compile>
     <Compile Include="FrmPermisos.Designer.cs">
       <DependentUpon>FrmPermisos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPermisosAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPermisosAdd.Designer.cs">
+      <DependentUpon>FrmPermisosAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmProductos.cs">
       <SubType>Form</SubType>
@@ -97,6 +107,9 @@
     <EmbeddedResource Include="FrmPermisos.resx">
       <DependentUpon>FrmPermisos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmPermisosAdd.resx">
+      <DependentUpon>FrmPermisosAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmProductos.resx">
       <DependentUpon>FrmProductos.cs</DependentUpon>
     </EmbeddedResource>
@@ -109,6 +122,10 @@
     <ProjectReference Include="..\AccesoDatos\AccesoDatos.csproj">
       <Project>{48C6BC89-0DC2-4669-BE3C-48D66340B77A}</Project>
       <Name>AccesoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{4F8CB903-A78B-4682-AF0B-4DF60901AFF1}</Project>
+      <Name>Entidades</Name>
     </ProjectReference>
     <ProjectReference Include="..\Manejador\Manejador.csproj">
       <Project>{B8062547-263A-4C5B-BEC8-BF8C700EF7CA}</Project>

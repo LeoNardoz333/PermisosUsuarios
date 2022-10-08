@@ -34,3 +34,6 @@ C:\OneDrive\Documentos\Escuela\Base de datos\Administración de base de datos\Pr
 C:\OneDrive\Documentos\Escuela\Base de datos\Administración de base de datos\Proyectos\PresentacionPermisosUsuarios\PresentacionPermisosUsuarios\obj\Debug\PresentacionPermisosUsuarios.FrmProductos.resources
 C:\OneDrive\Documentos\Escuela\Base de datos\Administración de base de datos\Proyectos\PresentacionPermisosUsuarios\PresentacionPermisosUsuarios\bin\Debug\Crud.dll
 C:\OneDrive\Documentos\Escuela\Base de datos\Administración de base de datos\Proyectos\PresentacionPermisosUsuarios\PresentacionPermisosUsuarios\bin\Debug\Crud.pdb
+C:\OneDrive\Documentos\Escuela\Base de datos\Administración de base de datos\Proyectos\PresentacionPermisosUsuarios\PresentacionPermisosUsuarios\bin\Debug\Entidades.dll
+C:\OneDrive\Documentos\Escuela\Base de datos\Administración de base de datos\Proyectos\PresentacionPermisosUsuarios\PresentacionPermisosUsuarios\bin\Debug\Entidades.pdb
+C:\OneDrive\Documentos\Escuela\Base de datos\Administración de base de datos\Proyectos\PresentacionPermisosUsuarios\PresentacionPermisosUsuarios\obj\Debug\PresentacionPermisosUsuarios.FrmPermisosAdd.resources

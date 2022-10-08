@@ -53,6 +53,8 @@ namespace PresentacionPermisosUsuarios
             this.dtgPermisos.Name = "dtgPermisos";
             this.dtgPermisos.Size = new System.Drawing.Size(722, 266);
             this.dtgPermisos.TabIndex = 2;
+            this.dtgPermisos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgPermisos_CellClick);
+            this.dtgPermisos.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgPermisos_CellEnter);
             // 
             // btnSalir
             // 
@@ -77,6 +79,7 @@ namespace PresentacionPermisosUsuarios
             this.btnAgregar.Size = new System.Drawing.Size(32, 32);
             this.btnAgregar.TabIndex = 0;
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // FrmPermisos
             // 

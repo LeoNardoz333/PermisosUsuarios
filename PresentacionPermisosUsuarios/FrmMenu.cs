@@ -26,7 +26,7 @@ namespace PresentacionPermisosUsuarios
 
         private void optSalir_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Close();
         }
 
         private void optProductos_Click(object sender, EventArgs e)

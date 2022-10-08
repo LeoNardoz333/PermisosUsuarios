@@ -32,9 +32,9 @@ namespace Manejador
                     herramientas.Enabled = false;
             }
         }
-        public void permisosForm()
+        public void manipularPermisos(dynamic Entidad)
         {
-
+            adp.manipularPermisos(Entidad);
         }
         public void mostrarPermisos(DataGridView tabla, string filtro)
         {
