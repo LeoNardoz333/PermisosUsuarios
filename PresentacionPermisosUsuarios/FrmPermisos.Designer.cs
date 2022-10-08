@@ -29,21 +29,12 @@ namespace PresentacionPermisosUsuarios
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAgregar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.dtgPermisos = new System.Windows.Forms.DataGridView();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPermisos)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Image = global::PresentacionPermisosUsuarios.Properties.Resources.anadir;
-            this.btnAgregar.Location = new System.Drawing.Point(703, 12);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(32, 32);
-            this.btnAgregar.TabIndex = 0;
-            this.btnAgregar.UseVisualStyleBackColor = true;
             // 
             // txtBuscar
             // 
@@ -52,6 +43,7 @@ namespace PresentacionPermisosUsuarios
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(684, 26);
             this.txtBuscar.TabIndex = 1;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // dtgPermisos
             // 
@@ -75,6 +67,16 @@ namespace PresentacionPermisosUsuarios
             this.btnSalir.Text = "Regresar";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Image = global::PresentacionPermisosUsuarios.Properties.Resources.anadir;
+            this.btnAgregar.Location = new System.Drawing.Point(703, 12);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(32, 32);
+            this.btnAgregar.TabIndex = 0;
+            this.btnAgregar.UseVisualStyleBackColor = true;
             // 
             // FrmPermisos
             // 
@@ -89,6 +91,7 @@ namespace PresentacionPermisosUsuarios
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmPermisos";
             this.Text = "Modificar permisos de los usuarios";
+            this.Load += new System.EventHandler(this.FrmPermisos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgPermisos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

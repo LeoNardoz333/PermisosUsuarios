@@ -21,3 +21,5 @@ C:\OneDrive\Documentos\Escuela\Base de datos\Administración de base de datos\Pr
 C:\OneDrive\Documentos\Escuela\Base de datos\Administración de base de datos\Proyectos\PresentacionPermisosUsuarios\Manejador\bin\Debug\System.Numerics.Vectors.dll
 C:\OneDrive\Documentos\Escuela\Base de datos\Administración de base de datos\Proyectos\PresentacionPermisosUsuarios\Manejador\bin\Debug\ConectarRedReal.pdb
 C:\OneDrive\Documentos\Escuela\Base de datos\Administración de base de datos\Proyectos\PresentacionPermisosUsuarios\Manejador\bin\Debug\MySql.Data.xml
+C:\OneDrive\Documentos\Escuela\Base de datos\Administración de base de datos\Proyectos\PresentacionPermisosUsuarios\Manejador\bin\Debug\Crud.dll
+C:\OneDrive\Documentos\Escuela\Base de datos\Administración de base de datos\Proyectos\PresentacionPermisosUsuarios\Manejador\bin\Debug\Crud.pdb

@@ -50,7 +50,7 @@ namespace PresentacionPermisosUsuarios
 
         private void FrmMenu_Load(object sender, EventArgs e)
         {
-            var ds = adp.mostrarPermisos(FrmInicioSesion.idusuario);
+            var ds = adp.extraerPermisos(FrmInicioSesion.idusuario);
             var dt = new DataTable();
             dt = ds.Tables[0];
             for (int i = 0; i < dt.Rows.Count; i++)

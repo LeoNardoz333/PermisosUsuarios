@@ -26,12 +26,16 @@ namespace AccesoDatos
 
         public DataSet mostrarUsuarios(string filtro)
         {
-            return b.Obtener(string.Format("call mostrarUsuarios()",filtro),"usuario");
+            return b.Obtener(string.Format("call mostrarUsuarios('%{0}%')",filtro),"usuario");
         }
 
-        public DataSet mostrarPermisos(int idUsuario)
+        public DataSet mostrarPermisos(string filtro)
         {
-            return b.Obtener(string.Format("select * from permisos where _idUsuario={0}",idUsuario),"permisos");
+            return b.Obtener(string.Format("call mostrarPermisos('%{0}%')",filtro),"permisos");
+        }
+        public DataSet extraerPermisos(int idUsuario)
+        {
+            return b.Obtener(string.Format("select * from permisos where _idUsuario={0}", idUsuario), "permisos");
         }
     }
 }
