@@ -16,7 +16,6 @@ namespace PresentacionPermisosUsuarios
     public partial class FrmProductos : Form
     {
         ManejadorProductos mp;
-        ADpermisos adpe;
         public static Productos producto = new Productos("","","","",0);
         public static bool modificarU=FrmMenu.modificarU, agregar=FrmMenu.agregar,
             mostrar=FrmMenu.mostrar, eliminar=FrmMenu.eliminar, modificar=FrmMenu.modificar;
@@ -26,7 +25,6 @@ namespace PresentacionPermisosUsuarios
         {
             InitializeComponent();
             mp = new ManejadorProductos();
-            adpe = new ADpermisos();
         }
 
         private void dtgProductos_CellEnter(object sender, DataGridViewCellEventArgs e)
@@ -35,8 +33,17 @@ namespace PresentacionPermisosUsuarios
             columna = e.ColumnIndex;
         }
 
+        private void FrmProductos_Load(object sender, EventArgs e)
+        {
+            Actualizar();
+        }
+
         private void dtgProductos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            producto.CodigoBarras = dtgProductos.Rows[fila].Cells[0].Value.ToString();
+            producto.Nombre = dtgProductos.Rows[fila].Cells[1].Value.ToString();
+            producto.Descripcion = dtgProductos.Rows[fila].Cells[2].Value.ToString();
+            producto.Marca = dtgProductos.Rows[fila].Cells[3].Value.ToString();
             switch (columna)
             {
                 case 4:
@@ -49,6 +56,7 @@ namespace PresentacionPermisosUsuarios
                             producto.Opcion = 2;
                             FrmProductosAdd owo = new FrmProductosAdd();
                             owo.ShowDialog();
+                            Actualizar();
                         }
                     }
                     break;
@@ -95,6 +103,7 @@ namespace PresentacionPermisosUsuarios
                 {
                     FrmProductosAdd owo = new FrmProductosAdd();
                     owo.ShowDialog();
+                    Actualizar();
                 }
             }
         }
