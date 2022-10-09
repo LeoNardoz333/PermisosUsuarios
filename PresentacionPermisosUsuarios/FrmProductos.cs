@@ -47,7 +47,7 @@ namespace PresentacionPermisosUsuarios
                         {
 
                             producto.Opcion = 2;
-                            FrmPermisosAdd owo = new FrmPermisosAdd();
+                            FrmProductosAdd owo = new FrmProductosAdd();
                             owo.ShowDialog();
                         }
                     }

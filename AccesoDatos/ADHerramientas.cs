@@ -13,8 +13,8 @@ namespace AccesoDatos
         Base b = new Base("localhost", "root", "", "agenciaautomotriz");
         public void manipularHerramientas(dynamic Entidad)
         {
-            b.comando(string.Format("CALL manipularHerramientas({0},'{1}','{2}', {3}, '{4}','{5}')",
-                Entidad.Opcion, Entidad.CodigoBarras, Entidad.Nombre,Entidad.Medida, Entidad.Descripcion, Entidad.Marca));
+            b.comando(string.Format("CALL insertarHerramientas({0},'{1}','{2}', {3}, '{4}','{5}')",
+                Entidad.Opcion, Entidad.CodigoHerramienta, Entidad.Nombre,Entidad.Medida, Entidad.Descripcion, Entidad.Marca));
         }
         public DataSet mostrar(int idusuario, int codigo, string filtro)
         {

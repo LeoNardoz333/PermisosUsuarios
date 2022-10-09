@@ -36,8 +36,18 @@ namespace PresentacionPermisosUsuarios
             Actualizar();
         }
 
+        private void FrmHerramientas_Load(object sender, EventArgs e)
+        {
+            Actualizar();
+        }
+
         private void dtgHerramientas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            herramientas.CodigoHerramienta = dtgHerramientas.Rows[fila].Cells[0].Value.ToString();
+            herramientas.Nombre = dtgHerramientas.Rows[fila].Cells[1].Value.ToString();
+            herramientas.Medida = double.Parse(dtgHerramientas.Rows[fila].Cells[2].Value.ToString());
+            herramientas.Marca = dtgHerramientas.Rows[fila].Cells[3].Value.ToString();
+            herramientas.Descripcion = dtgHerramientas.Rows[fila].Cells[4].Value.ToString();
             switch (columna)
             {
                 case 5:
@@ -46,10 +56,10 @@ namespace PresentacionPermisosUsuarios
                             MessageBox.Show("No tienes permisos para modificar datos");
                         else
                         {
-
                             herramientas.Opcion = 2;
-                            FrmPermisosAdd owo = new FrmPermisosAdd();
+                            FrmHerramientasAdd owo = new FrmHerramientasAdd();
                             owo.ShowDialog();
+                            Actualizar();
                         }
                     }
                     break;
@@ -92,6 +102,7 @@ namespace PresentacionPermisosUsuarios
                 {
                     FrmHerramientasAdd owo = new FrmHerramientasAdd();
                     owo.ShowDialog();
+                    Actualizar();
                 }
             }
         }
