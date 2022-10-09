@@ -58,6 +58,7 @@ namespace PresentacionPermisosUsuarios
             // 
             // cmbIdUsuario
             // 
+            this.cmbIdUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbIdUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbIdUsuario.FormattingEnabled = true;
             this.cmbIdUsuario.Location = new System.Drawing.Point(87, 10);
@@ -67,6 +68,7 @@ namespace PresentacionPermisosUsuarios
             // 
             // cmbCodigo
             // 
+            this.cmbCodigo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCodigo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbCodigo.FormattingEnabled = true;
             this.cmbCodigo.Items.AddRange(new object[] {
@@ -88,6 +90,7 @@ namespace PresentacionPermisosUsuarios
             // 
             // cmbModificarU
             // 
+            this.cmbModificarU.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbModificarU.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbModificarU.FormattingEnabled = true;
             this.cmbModificarU.Items.AddRange(new object[] {
@@ -109,6 +112,7 @@ namespace PresentacionPermisosUsuarios
             // 
             // cmbMostrar
             // 
+            this.cmbMostrar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMostrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbMostrar.FormattingEnabled = true;
             this.cmbMostrar.Items.AddRange(new object[] {
@@ -130,6 +134,7 @@ namespace PresentacionPermisosUsuarios
             // 
             // cmbAgregar
             // 
+            this.cmbAgregar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbAgregar.FormattingEnabled = true;
             this.cmbAgregar.Items.AddRange(new object[] {
@@ -151,6 +156,7 @@ namespace PresentacionPermisosUsuarios
             // 
             // cmbModificar
             // 
+            this.cmbModificar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbModificar.FormattingEnabled = true;
             this.cmbModificar.Items.AddRange(new object[] {
@@ -172,6 +178,7 @@ namespace PresentacionPermisosUsuarios
             // 
             // cmbEliminar
             // 
+            this.cmbEliminar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbEliminar.FormattingEnabled = true;
             this.cmbEliminar.Items.AddRange(new object[] {
