@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="ManejadorInicioSesion.cs" />
     <Compile Include="ManejadorPermisos.cs" />
+    <Compile Include="ManejadorProductos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

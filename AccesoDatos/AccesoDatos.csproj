@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="ADiniciarSesion.cs" />
     <Compile Include="ADpermisos.cs" />
+    <Compile Include="ADProductos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

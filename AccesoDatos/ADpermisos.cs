@@ -18,12 +18,6 @@ namespace AccesoDatos
                 Entidad.ModificarU,Entidad.Agregar,Entidad.Modificar,Entidad.Eliminar,Entidad.Mostrar));
         }
 
-        public void Borrar(dynamic Entidad)
-        {
-            b.comando(string.Format("call manipularPermisos({0},{1},{2},{4},{5},{6},{7},{8})", Entidad.Opcion, Entidad._IdUsuario, Entidad.ModificarU,
-                Entidad.Agregar, Entidad.Modificar, Entidad.Eliminar, Entidad.Mostrar));
-        }
-
         public DataSet mostrarUsuarios(string filtro)
         {
             return b.Obtener(string.Format("call mostrarUsuarios('%{0}%')",filtro),"usuario");
