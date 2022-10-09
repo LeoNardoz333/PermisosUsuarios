@@ -19,17 +19,21 @@ namespace Manejador
         {
             if (codigo == 1)
             {
-                if (modificarU != true)
-                    usuarios.Enabled = false;
-                if (agregar != true || modificar != true || eliminar != true || mostrar != true)
-                    producto.Enabled = false;
+                if (modificarU == true)
+                    usuarios.Enabled = true;
+                if (((agregar == true || modificar == true || eliminar == true) && (mostrar==true)) 
+                    || (mostrar == true && (agregar == false || modificar == false || eliminar == false)))
+                    producto.Enabled = true;
+                /*if (mostrar == true)
+                    producto.Enabled = true;*/
             }
             if (codigo == 2)
             {
-                if (modificarU != true)
-                    usuarios.Enabled = false;
-                if (agregar != true || modificar != true || eliminar != true || mostrar != true)
-                    herramientas.Enabled = false;
+                if (modificarU == true)
+                    usuarios.Enabled = true;
+                if (((agregar == true || modificar == true || eliminar == true) && (mostrar==true))
+                    || (mostrar == true && (agregar == false || modificar == false || eliminar == false)))
+                    herramientas.Enabled = true;
             }
         }
         public void manipularPermisos(dynamic Entidad)

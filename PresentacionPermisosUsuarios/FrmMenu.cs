@@ -17,6 +17,7 @@ namespace PresentacionPermisosUsuarios
         ADpermisos adp;
         ManejadorPermisos mp;
         public static bool modificarU, agregar, mostrar, eliminar, modificar;
+        public static int _codigo;
 
         private void optHerramientas_Click(object sender, EventArgs e)
         {
@@ -53,6 +54,9 @@ namespace PresentacionPermisosUsuarios
             var ds = adp.extraerPermisos(FrmInicioSesion.idusuario);
             var dt = new DataTable();
             dt = ds.Tables[0];
+            optHerramientas.Enabled = false;
+            optPermisos.Enabled = false;
+            optProductos.Enabled = false;
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 modificarU = bool.Parse(dt.Rows[i]["modificarUsuarios"].ToString());
@@ -60,7 +64,9 @@ namespace PresentacionPermisosUsuarios
                 mostrar = bool.Parse(dt.Rows[i]["mostrar"].ToString());
                 eliminar = bool.Parse(dt.Rows[i]["eliminar"].ToString());
                 modificar = bool.Parse(dt.Rows[i]["modificar"].ToString());
-                mp.evaluarPermisos(int.Parse(dt.Rows[i]["_codigo"].ToString()),modificarU,agregar,modificar,
+                _codigo = int.Parse(dt.Rows[i]["_codigo"].ToString());
+                MessageBox.Show("codigo: "+_codigo);
+                mp.evaluarPermisos(/*int.Parse(dt.Rows[i]["_codigo"].ToString())*/_codigo,modificarU,agregar,modificar,
                     eliminar,mostrar,optPermisos,optProductos,optHerramientas);
             }
         }

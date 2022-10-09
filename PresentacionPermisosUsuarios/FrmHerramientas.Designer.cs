@@ -44,6 +44,8 @@ namespace PresentacionPermisosUsuarios
             this.dtgHerramientas.Name = "dtgHerramientas";
             this.dtgHerramientas.Size = new System.Drawing.Size(722, 266);
             this.dtgHerramientas.TabIndex = 10;
+            this.dtgHerramientas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgHerramientas_CellClick);
+            this.dtgHerramientas.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgHerramientas_CellEnter);
             // 
             // txtBuscar
             // 
@@ -52,6 +54,7 @@ namespace PresentacionPermisosUsuarios
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(684, 26);
             this.txtBuscar.TabIndex = 9;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // btnSalir
             // 
@@ -66,6 +69,7 @@ namespace PresentacionPermisosUsuarios
             this.btnSalir.Text = "Regresar";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnAgregar
             // 
@@ -75,6 +79,7 @@ namespace PresentacionPermisosUsuarios
             this.btnAgregar.Size = new System.Drawing.Size(32, 32);
             this.btnAgregar.TabIndex = 8;
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // FrmHerramientas
             // 

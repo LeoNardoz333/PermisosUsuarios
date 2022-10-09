@@ -44,6 +44,8 @@ namespace PresentacionPermisosUsuarios
             this.dtgProductos.Name = "dtgProductos";
             this.dtgProductos.Size = new System.Drawing.Size(722, 266);
             this.dtgProductos.TabIndex = 6;
+            this.dtgProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgProductos_CellClick);
+            this.dtgProductos.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgProductos_CellEnter);
             // 
             // txtBuscar
             // 
@@ -52,6 +54,7 @@ namespace PresentacionPermisosUsuarios
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(684, 26);
             this.txtBuscar.TabIndex = 5;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // btnSalir
             // 
@@ -66,6 +69,7 @@ namespace PresentacionPermisosUsuarios
             this.btnSalir.Text = "Regresar";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnAgregar
             // 
@@ -75,6 +79,7 @@ namespace PresentacionPermisosUsuarios
             this.btnAgregar.Size = new System.Drawing.Size(32, 32);
             this.btnAgregar.TabIndex = 4;
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // FrmProductos
             // 

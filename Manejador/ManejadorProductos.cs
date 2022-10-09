@@ -25,7 +25,6 @@ namespace Manejador
             tabla.DataSource = adp.mostrar(idusuario, codigo, filtro).Tables["producto"];
             tabla.Columns.Insert(4, g.Boton("Editar", Color.Green));
             tabla.Columns.Insert(5, g.Boton("Borrar", Color.Red));
-            tabla.Columns[0].Visible = false;
         }
     }
 }

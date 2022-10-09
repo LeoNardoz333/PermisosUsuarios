@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ADHerramientas.cs" />
     <Compile Include="ADiniciarSesion.cs" />
     <Compile Include="ADpermisos.cs" />
     <Compile Include="ADProductos.cs" />
