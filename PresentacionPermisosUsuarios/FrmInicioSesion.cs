@@ -27,9 +27,9 @@ namespace PresentacionPermisosUsuarios
             var ds = adis.mostrar(txtUsuario.Text,txtPass.Text);
             var dt = new DataTable();
             dt = ds.Tables[0];
-            idusuario = int.Parse(dt.Rows[0]["idUsuario"].ToString());
             try
             {
+                idusuario = int.Parse(dt.Rows[0]["idUsuario"].ToString());
                 usuario = dt.Rows[0]["nombre"].ToString();
                 contra = dt.Rows[0]["pass"].ToString();
                 if (usuario == txtUsuario.Text && contra == txtPass.Text)
