@@ -19,8 +19,6 @@ namespace Entidades
             Eliminar = eliminar;
             Mostrar = mostrar;
         }
-
-        //opcion,__idUsuario,__codigo,_modificarU,_agregar,_modificar,_eliminar,_mostrar
         public int Opcion { get; set; }
         public int _IdUsuario { get; set; }
         public int _Codigo { get; set; }

@@ -10,7 +10,6 @@ namespace AccesoDatos
 {
     public class ADpermisos
     {
-        //opcion,__idUsuario,__codigo,_modificarU,_agregar,_modificar,_eliminar,_mostrar
         Base b = new Base("localhost", "root", "", "agenciaautomotriz");
         public void manipularPermisos (dynamic Entidad)
         {
@@ -38,6 +37,10 @@ namespace AccesoDatos
         public DataSet extraerPermisos(int idUsuario)
         {
             return b.Obtener(string.Format("select * from permisos where _idUsuario={0}", idUsuario), "permisos");
+        }
+        public DataSet permisosTablas(int idUsuario, int codigo)
+        {
+            return b.Obtener(string.Format("select * from permisos where _idUsuario={0} and _codigo = {1}", idUsuario,codigo), "permisos");
         }
     }
 }

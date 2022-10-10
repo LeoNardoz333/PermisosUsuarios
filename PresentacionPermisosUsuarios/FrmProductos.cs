@@ -16,15 +16,16 @@ namespace PresentacionPermisosUsuarios
     public partial class FrmProductos : Form
     {
         ManejadorProductos mp;
+        ADpermisos adp;
         public static Productos producto = new Productos("","","","",0);
-        public static bool modificarU=FrmMenu.modificarU, agregar=FrmMenu.agregar,
-            mostrar=FrmMenu.mostrar, eliminar=FrmMenu.eliminar, modificar=FrmMenu.modificar;
+        public static bool modificarU, agregar, mostrar, eliminar, modificar;
         public static int codigo = 1;
         int fila, columna;
         public FrmProductos()
         {
             InitializeComponent();
             mp = new ManejadorProductos();
+            adp = new ADpermisos();
         }
 
         private void dtgProductos_CellEnter(object sender, DataGridViewCellEventArgs e)
@@ -36,6 +37,15 @@ namespace PresentacionPermisosUsuarios
         private void FrmProductos_Load(object sender, EventArgs e)
         {
             Actualizar();
+            var ds = adp.permisosTablas(FrmInicioSesion.idusuario, codigo);
+            var dt = new DataTable();
+            dt = ds.Tables[0];
+            modificarU = bool.Parse(dt.Rows[0]["modificarUsuarios"].ToString());
+            agregar = bool.Parse(dt.Rows[0]["agregar"].ToString());
+            mostrar = bool.Parse(dt.Rows[0]["mostrar"].ToString());
+            eliminar = bool.Parse(dt.Rows[0]["eliminar"].ToString());
+            modificar = bool.Parse(dt.Rows[0]["modificar"].ToString());
+            codigo = int.Parse(dt.Rows[0]["_codigo"].ToString());
         }
 
         private void dtgProductos_CellClick(object sender, DataGridViewCellEventArgs e)

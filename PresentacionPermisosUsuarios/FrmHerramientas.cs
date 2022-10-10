@@ -1,4 +1,5 @@
-﻿using Entidades;
+﻿using AccesoDatos;
+using Entidades;
 using Manejador;
 using System;
 using System.Collections.Generic;
@@ -15,9 +16,10 @@ namespace PresentacionPermisosUsuarios
     public partial class FrmHerramientas : Form
     {
         ManejadorHerramientas mh;
+        ADpermisos adp;
         public static Herramientas herramientas = new Herramientas("","",0,"","",0);
-        public static bool modificarU = FrmMenu.modificarU, agregar = FrmMenu.agregar,
-            mostrar = FrmMenu.mostrar, eliminar = FrmMenu.eliminar, modificar = FrmMenu.modificar;
+        public static bool modificarU, agregar,
+            mostrar, eliminar, modificar;
         int fila, columna;
 
         private void dtgHerramientas_CellEnter(object sender, DataGridViewCellEventArgs e)
@@ -39,6 +41,15 @@ namespace PresentacionPermisosUsuarios
         private void FrmHerramientas_Load(object sender, EventArgs e)
         {
             Actualizar();
+            var ds = adp.permisosTablas(FrmInicioSesion.idusuario, codigo);
+            var dt = new DataTable();
+            dt = ds.Tables[0];
+            modificarU = bool.Parse(dt.Rows[0]["modificarUsuarios"].ToString());
+            agregar = bool.Parse(dt.Rows[0]["agregar"].ToString());
+            mostrar = bool.Parse(dt.Rows[0]["mostrar"].ToString());
+            eliminar = bool.Parse(dt.Rows[0]["eliminar"].ToString());
+            modificar = bool.Parse(dt.Rows[0]["modificar"].ToString());
+            codigo = int.Parse(dt.Rows[0]["_codigo"].ToString());
         }
 
         private void dtgHerramientas_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -86,6 +97,7 @@ namespace PresentacionPermisosUsuarios
         {
             InitializeComponent();
             mh = new ManejadorHerramientas();
+            adp = new ADpermisos();
         }
         void Actualizar()
         {
