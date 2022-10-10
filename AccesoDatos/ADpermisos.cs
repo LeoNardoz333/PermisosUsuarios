@@ -22,7 +22,15 @@ namespace AccesoDatos
         {
             return b.Obtener(string.Format("call mostrarUsuarios('%{0}%')",filtro),"usuario");
         }
-
+        public void manipularUsuarios(dynamic Entidad)
+        {
+            b.comando(string.Format("CALL manipularUsuarios({0},'{1}','{2}','{3}','{4}','{5}','{6}')",Entidad.IdUsuario,
+                Entidad.Nombre,Entidad.ApellisoP,Entidad.ApellidoM,Entidad.FechaNacimiento,Entidad.Rfc,Entidad.Pass));
+        }
+        public void borrarUsuarios(dynamic Entidad)
+        {
+            b.comando(string.Format("CALL borrarUsuarios({0})",Entidad.IdUsuario));
+        }
         public DataSet mostrarPermisos(string filtro)
         {
             return b.Obtener(string.Format("call mostrarPermisos('%{0}%')",filtro),"permisos");

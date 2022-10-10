@@ -65,8 +65,7 @@ namespace PresentacionPermisosUsuarios
                 eliminar = bool.Parse(dt.Rows[i]["eliminar"].ToString());
                 modificar = bool.Parse(dt.Rows[i]["modificar"].ToString());
                 _codigo = int.Parse(dt.Rows[i]["_codigo"].ToString());
-                MessageBox.Show("codigo: "+_codigo);
-                mp.evaluarPermisos(/*int.Parse(dt.Rows[i]["_codigo"].ToString())*/_codigo,modificarU,agregar,modificar,
+                mp.evaluarPermisos(_codigo,modificarU,agregar,modificar,
                     eliminar,mostrar,optPermisos,optProductos,optHerramientas);
             }
         }

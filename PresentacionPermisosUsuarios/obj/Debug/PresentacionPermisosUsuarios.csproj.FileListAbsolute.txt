@@ -39,3 +39,4 @@ C:\OneDrive\Documentos\Escuela\Base de datos\Administración de base de datos\Pr
 C:\OneDrive\Documentos\Escuela\Base de datos\Administración de base de datos\Proyectos\PresentacionPermisosUsuarios\PresentacionPermisosUsuarios\obj\Debug\PresentacionPermisosUsuarios.FrmPermisosAdd.resources
 C:\OneDrive\Documentos\Escuela\Base de datos\Administración de base de datos\Proyectos\PresentacionPermisosUsuarios\PresentacionPermisosUsuarios\obj\Debug\PresentacionPermisosUsuarios.FrmProductosAdd.resources
 C:\OneDrive\Documentos\Escuela\Base de datos\Administración de base de datos\Proyectos\PresentacionPermisosUsuarios\PresentacionPermisosUsuarios\obj\Debug\PresentacionPermisosUsuarios.FrmHerramientasAdd.resources
+C:\OneDrive\Documentos\Escuela\Base de datos\Administración de base de datos\Proyectos\PresentacionPermisosUsuarios\PresentacionPermisosUsuarios\obj\Debug\PresentacionPermisosUsuarios.FrmUsuariosAdd.resources

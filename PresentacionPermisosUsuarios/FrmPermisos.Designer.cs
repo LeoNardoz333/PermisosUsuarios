@@ -31,10 +31,11 @@ namespace PresentacionPermisosUsuarios
         {
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.dtgPermisos = new System.Windows.Forms.DataGridView();
+            this.lbl1 = new System.Windows.Forms.Label();
+            this.lbl2 = new System.Windows.Forms.Label();
+            this.cmbCambio = new System.Windows.Forms.ComboBox();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPermisos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,7 +44,7 @@ namespace PresentacionPermisosUsuarios
             this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBuscar.Location = new System.Drawing.Point(13, 15);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(684, 26);
+            this.txtBuscar.Size = new System.Drawing.Size(523, 26);
             this.txtBuscar.TabIndex = 1;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
@@ -57,6 +58,38 @@ namespace PresentacionPermisosUsuarios
             this.dtgPermisos.TabIndex = 2;
             this.dtgPermisos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgPermisos_CellClick);
             this.dtgPermisos.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgPermisos_CellEnter);
+            // 
+            // lbl1
+            // 
+            this.lbl1.AutoSize = true;
+            this.lbl1.Location = new System.Drawing.Point(9, 317);
+            this.lbl1.Name = "lbl1";
+            this.lbl1.Size = new System.Drawing.Size(98, 20);
+            this.lbl1.TabIndex = 4;
+            this.lbl1.Text = "1: Productos";
+            // 
+            // lbl2
+            // 
+            this.lbl2.AutoSize = true;
+            this.lbl2.Location = new System.Drawing.Point(9, 340);
+            this.lbl2.Name = "lbl2";
+            this.lbl2.Size = new System.Drawing.Size(122, 20);
+            this.lbl2.TabIndex = 5;
+            this.lbl2.Text = "2: Herramientas";
+            // 
+            // cmbCambio
+            // 
+            this.cmbCambio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCambio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbCambio.FormattingEnabled = true;
+            this.cmbCambio.Items.AddRange(new object[] {
+            "Permisos",
+            "Usuarios"});
+            this.cmbCambio.Location = new System.Drawing.Point(542, 14);
+            this.cmbCambio.Name = "cmbCambio";
+            this.cmbCambio.Size = new System.Drawing.Size(155, 28);
+            this.cmbCambio.TabIndex = 6;
+            this.cmbCambio.TextChanged += new System.EventHandler(this.cmbCambio_TextChanged);
             // 
             // btnSalir
             // 
@@ -83,31 +116,14 @@ namespace PresentacionPermisosUsuarios
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 317);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 20);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "1: Productos";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 340);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(122, 20);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "2: Herramientas";
-            // 
             // FrmPermisos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(747, 368);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cmbCambio);
+            this.Controls.Add(this.lbl2);
+            this.Controls.Add(this.lbl1);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.dtgPermisos);
             this.Controls.Add(this.txtBuscar);
@@ -115,6 +131,7 @@ namespace PresentacionPermisosUsuarios
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmPermisos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar permisos de los usuarios";
             this.Load += new System.EventHandler(this.FrmPermisos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgPermisos)).EndInit();
@@ -129,7 +146,8 @@ namespace PresentacionPermisosUsuarios
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.DataGridView dtgPermisos;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl1;
+        private System.Windows.Forms.Label lbl2;
+        private System.Windows.Forms.ComboBox cmbCambio;
     }
 }

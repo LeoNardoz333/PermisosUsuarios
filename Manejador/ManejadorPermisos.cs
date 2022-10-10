@@ -55,5 +55,25 @@ namespace Manejador
             caja.DisplayMember = "nombre";
             caja.ValueMember = "idUsuario";
         }
+        public void mostrarUsuarios(DataGridView tabla, string filtro)
+        {
+            tabla.Columns.Clear();
+            tabla.RowTemplate.Height = 30;
+            tabla.DataSource = adp.mostrarUsuarios(filtro).Tables["usuario"];
+            tabla.Columns.Insert(7, g.Boton("Editar", Color.Green));
+            tabla.Columns.Insert(8, g.Boton("Borrar", Color.Red));
+        }
+        public void manipularUsuarios(dynamic Entidad)
+        {
+            adp.manipularUsuarios(Entidad);
+            g.Mensaje("Se guardó al usuario correctamente","Enhorabuena",MessageBoxIcon.Information);
+        }
+        public void borrarUsuarios(dynamic Entidad)
+        {
+            DialogResult rs = MessageBox.Show("¿Estás seguro que deseas eliminar a este usuario", "ATENCIÓN",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (rs == DialogResult.Yes)
+                adp.borrarUsuarios(Entidad);
+        }
     }
 }
